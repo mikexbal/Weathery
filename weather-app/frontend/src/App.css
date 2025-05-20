@@ -1,0 +1,21 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto; /* This centers the root horizontally */
+  margin-top: 50px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* This centers its children horizontally */
+}
+#heading {
+  padding-top: 200px;
+}
+
+#container{
+  background-color: white;
+  width: 700px;
+  height: 650px;
+  border-radius: 15px;
+  color: black;
+  
+}
