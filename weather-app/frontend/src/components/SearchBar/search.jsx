@@ -12,15 +12,15 @@ function SearchBar() {
           method="get"
         >
           <input
-            class="searchBar"
+            className={styles.searchBar}
             id="city"
             name="city"
             type="search"
             placeholder="New York, Florida, Atlanta, etc..."
             aria-label="Search"
           />
-          <button class="searchButton" type="submit">
-            <i class="fa fa-search"></i>
+          <button className={styles.searchButton} type="submit">
+            <FaSearch />
           </button>
         </form>
       </nav>
