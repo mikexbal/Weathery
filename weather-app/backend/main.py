@@ -8,12 +8,6 @@ api_key = os.getenv("API_KEY")
 app = Flask(__name__)
 CORS(app)
 
-@app.route("/")
-def home():
-    return f"<h1>Hello Michael!</h1>"
-
-
-
 @app.route('/search', methods=['GET'])
 def search():
     city = request.args.get('city', '')
@@ -44,9 +38,6 @@ def search():
     print(weather_data)
 
     return weather_data
-
-
-
 
 if __name__ == "__main__":
     app.run()
