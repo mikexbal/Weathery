@@ -1,18 +1,18 @@
 import os, requests
 from dotenv import load_dotenv, dotenv_values 
-from flask import Flask, redirect, url_for, request, render_template
+from flask import Flask, request
+from flask_cors import CORS
 load_dotenv()
 
 api_key = os.getenv("API_KEY")
 app = Flask(__name__)
+CORS(app)
 
 @app.route("/")
 def home():
     return f"<h1>Hello Michael!</h1>"
 
-@app.route("/testing")
-def admin():
-    return redirect(url_for("home"))
+
 
 @app.route('/search', methods=['GET'])
 def search():
@@ -40,6 +40,8 @@ def search():
     print(f"Current temperature: {temp}")
     print(f"Today's high: {temp_high}")
     print(f"Today's low: {temp_low}")
+
+    print(weather_data)
 
     return weather_data
 
